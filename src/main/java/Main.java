@@ -19,7 +19,6 @@ public class Main {
         try {
             int gender = sc.nextInt();
             //== or equals?
-            //likbez for deleting Q/K or QV/KV
             if(gender==1){
                 numbers.remove("Q");
             }
@@ -38,33 +37,63 @@ public class Main {
         }
     }
 
+
+
     //Shuffle like cards
-    public static void shuffleLovers(){
-
-    }
-
-    public static void getCardToBuffer(Random random, int randomCard, int boundOfRandom, List<String> cards){
-
-        for(int i = 0; i<8; i++){
-            randomCard = random.nextInt(boundOfRandom);
-            cards.get(randomCard);
-            cards.remove(randomCard);
-//            cards.set(randomCard, "*********");
-            System.out.print(randomCard + " ");
-            boundOfRandom--;
+    public static void shuffleLovers(List<Lover> lovers){
+        Random random = new Random();
+        int randomLover = 0;
+        int boundOfLovers = 4;
+        for(int i =0;i<4;i++){
+            randomLover = random.nextInt(boundOfLovers);
+            String s = String.valueOf(lovers.get(randomLover));
+            lovers.remove(randomLover);
+            boundOfLovers--;
+            System.out.println(s);
         }
-        System.out.println();
+
     }
 
     public static void main(String[] args){
 
         //think about shuffling lovers
-        Lover firstLover = new Lover("Ivan");
-        Lover secondLover = new Lover("Misha");
-        Lover thirdLover = new Lover("Nikita");
-        Lover fourthLover = new Lover("Oleg");
+        Lover firstLover = new Lover();
+        Lover secondLover = new Lover();
+        Lover thirdLover = new Lover();
+        Lover fourthLover = new Lover();
 
-        List<String> numbers = new ArrayList<>(); //36 cards
+//        firstLover.ConfigureLover();
+//        System.out.println(firstLover.getName());
+//        secondLover.ConfigureLover();
+//        thirdLover.ConfigureLover();
+//        fourthLover.ConfigureLover();
+
+        Scanner scannerName = new Scanner(System.in);
+        System.out.println("Choose name for first lover");
+        String FirstName = scannerName.next();
+        System.out.println("Choose name for second lover");
+        String SecondName = scannerName.next();
+        System.out.println("Choose name for third lover");
+        String ThirdName = scannerName.next();
+        System.out.println("Choose name for fourth lover");
+        String FourthName = scannerName.next();
+        firstLover.setName(FirstName);
+        secondLover.setName(SecondName);
+        thirdLover.setName(ThirdName);
+        fourthLover.setName(FourthName);
+
+
+
+        List<Lover> lovers = new ArrayList<>();
+
+        lovers.add(firstLover);
+        lovers.add(secondLover);
+        lovers.add(thirdLover);
+        lovers.add(fourthLover);
+
+        shuffleLovers(lovers);
+
+        List<String> numbers = new ArrayList<>(); //36 cards - 4 cards after lover_gender_using
         List<String> suit = new ArrayList<>();
         List<String> cards = new ArrayList<>();
         List<String> buffer = new ArrayList<>();
@@ -105,17 +134,26 @@ public class Main {
 //        int boundOfRandom = 35;
         int boundOfRandom = 31;
 
-        getCardToBuffer(random, randomCard, boundOfRandom, cards);
+        firstLover.getCardToBuffer(random, randomCard, boundOfRandom, cards);
         System.out.println(cards);
         System.out.println(cards.size());
         boundOfRandom-=8;
-        getCardToBuffer(random, randomCard, boundOfRandom, cards);
+        secondLover.getCardToBuffer(random, randomCard, boundOfRandom, cards);
         System.out.println(cards);
         System.out.println(cards.size());
         boundOfRandom-=8;
-        getCardToBuffer(random, randomCard, boundOfRandom, cards);
+        thirdLover.getCardToBuffer(random, randomCard, boundOfRandom, cards);
         System.out.println(cards);
         System.out.println(cards.size());
+        boundOfRandom-=7;
+        fourthLover.getCardToBuffer(random, randomCard, boundOfRandom, cards);
+        System.out.println(cards);
+        System.out.println(cards.size());
+
+        System.out.println("1 Lover Deck" + firstLover.getMyDeck());
+        System.out.println("2 Lover Deck" + secondLover.getMyDeck());
+        System.out.println("3 Lover Deck" + thirdLover.getMyDeck());
+        System.out.println("4 Lover Deck" + fourthLover.getMyDeck());
 
 //        System.out.println();
 //        System.out.println(numbers);
