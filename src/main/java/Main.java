@@ -98,7 +98,7 @@ public class Main {
         System.out.println(cards);
         System.out.println(cards.size());
 
-        //creating a random int in bound of 0-35
+//        creating a random int in bound of 0-35
         //after removing gender u need to create bound of 0-31
         Random random = new Random();
         int randomCard = 0;
