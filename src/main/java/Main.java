@@ -58,8 +58,11 @@ public class Main {
         for(int i =0;i<shuffeledLovers.size();i++){
 
             //getMyDeck instead of get
-            String s = String.valueOf(shuffeledLovers.get(i));
-            System.out.println(s);
+            // ---! Change if YOU wanna see names !---
+//            String s = String.valueOf(shuffeledLovers.get(i));
+            String s = String.valueOf(shuffeledLovers.get(i).getMyDeck());
+//            System.out.println(s);
+            System.out.println(i+1 + " " + s);
         }
     }
 
@@ -96,7 +99,8 @@ public class Main {
         System.out.println("Now you should choose last person you'll remove! It's epic moment!!!");
         System.out.println("Print his number");
         Scanner scRemover = new Scanner(System.in);
-        System.out.println(shuffeledLovers.remove(scRemover.nextInt()-1));
+//        System.out.println(shuffeledLovers.remove(scRemover.nextInt()-1));
+        shuffeledLovers.remove(scRemover.nextInt()-1);
         System.out.println("Yeees!!! Finally! Name of your lover is... " + shuffeledLovers.get(0).getName());
         System.out.println("Happy love to both of you!");
         System.out.println("Thank you for playing and goodbye))");
@@ -110,7 +114,6 @@ public class Main {
         List<String> numbers = new ArrayList<>(); //36 cards - 4 cards after lover_gender_using
         List<String> suit = new ArrayList<>();
         List<String> cards = new ArrayList<>();
-        List<String> buffer = new ArrayList<>();
 
 
         numbers.add("6");
@@ -129,7 +132,7 @@ public class Main {
         suit.add("spades");
 
         chooseLoverGender(numbers);
-        System.out.println(numbers);
+//        System.out.println(numbers);
 
 
         for(int i=0;i<numbers.size();i++){
@@ -138,8 +141,8 @@ public class Main {
             }
         }
 
-        System.out.println(cards);
-        System.out.println(cards.size());
+//        System.out.println(cards);
+//        System.out.println(cards.size());
 
         //think about shuffling lovers
         Lover firstLover = new Lover();
@@ -170,13 +173,13 @@ public class Main {
         lovers.add(secondLover);
         lovers.add(thirdLover);
         lovers.add(fourthLover);
-        System.out.println(lovers);
+//        System.out.println(lovers);
 
         List<Lover> shuffledLovers = new ArrayList<>();
 
         shuffleLovers(lovers, shuffledLovers);
 //        System.out.println(lovers);
-        System.out.println(shuffledLovers);
+//        System.out.println(shuffledLovers);
 
 
 
@@ -188,7 +191,7 @@ public class Main {
         int boundOfRandom = 39;
 
 
-        System.out.println(cards);
+//        System.out.println(cards);
 //        for(int i = 0; i<shuffledLovers.size();i++){
 //            if(i==shuffledLovers.size()-1){
 //                boundOfRandom-=7;
@@ -201,21 +204,21 @@ public class Main {
 //            System.out.println(cards.size());
 //        }
 
-        System.out.println(boundOfRandom);
+//        System.out.println(boundOfRandom);
         InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
         getLoversFromList(shuffledLovers);
         removeLover(cards, shuffledLovers);
-        System.out.println(shuffledLovers);
-        System.out.println(cards);
+//        System.out.println(shuffledLovers);
+//        System.out.println(cards);
         boundOfRandom-=8;
-        System.out.println(boundOfRandom);
+//        System.out.println(boundOfRandom);
         InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
         getLoversFromList(shuffledLovers);
         removeLover(cards, shuffledLovers);
-        System.out.println(shuffledLovers);
-        System.out.println(cards);
+//        System.out.println(shuffledLovers);
+//        System.out.println(cards);
         boundOfRandom-=8;
-        System.out.println(boundOfRandom);
+//        System.out.println(boundOfRandom);
         InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
         getLoversFromList(shuffledLovers);
         findYourLover(shuffledLovers);
