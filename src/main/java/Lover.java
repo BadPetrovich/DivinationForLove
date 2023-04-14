@@ -20,10 +20,10 @@ public class Lover {
             myDeck.add(cards.get(randomCard));
             cards.remove(randomCard);
 //            cards.set(randomCard, "*********");
-            System.out.print(randomCard + " ");
+//            System.out.print(randomCard + " ");
             boundOfRandom--;
         }
-        System.out.println();
+//        System.out.println();
     }
 
     public void setName(String name) {
@@ -36,6 +36,10 @@ public class Lover {
 
     public List<String> getMyDeck() {
         return myDeck;
+    }
+
+    public void clearMyDeck() {
+       myDeck.removeAll(myDeck);
     }
 
     @Override

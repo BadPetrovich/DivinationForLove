@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Added 3 lists for cards, Lover class and some functions">
+    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Main and Lover were changed.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -87,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681259931566</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Main and Lover were changed.">
+      <created>1681325082999</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681325082999</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added 3 lists for cards, Lover class and some functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 3 lists for cards, Lover class and some functions" />
+    <MESSAGE value="Main and Lover were changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Main and Lover were changed." />
   </component>
 </project>
