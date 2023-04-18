@@ -9,10 +9,10 @@ public class Lover {
     }
 
 
-    public void getCardToBuffer(Random random, int randomCard, int boundOfRandom, List<String> cards){
+    public void getCardToBuffer(Random random, int boundOfRandom, List<String> cards){
 
         for(int i = 0; i<8; i++){
-            randomCard = random.nextInt(boundOfRandom);
+            int randomCard = random.nextInt(boundOfRandom);
             myDeck.add(cards.get(randomCard));
             cards.remove(randomCard);
             boundOfRandom--;
@@ -61,7 +61,7 @@ public class Lover {
 }
 
 class CardComparator implements Comparator<String>{
-    String[] suit = {"spades", "hearts", "diamonds", "clubs"};
+    String[] suit = {"spades", "clubs", "diamonds", "hearts"};
 
     @Override
     public int compare(String o1, String o2) {

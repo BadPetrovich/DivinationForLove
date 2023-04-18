@@ -60,11 +60,11 @@ public class Main {
         }
     }
 
-    public static void InitializeLover(List<Lover> shuffledLovers, List<String> cards,
-                                       int boundOfRandom, Random random, int randomCard){
+    public static void InitializeLover(List<Lover> shuffledLovers, List<String> cards){
+        Random random = new Random();
         for(int i = 0; i<shuffledLovers.size();i++){
-            boundOfRandom-=8;
-            shuffledLovers.get(i).getCardToBuffer(random, randomCard, boundOfRandom, cards);
+            int boundOfRandom=cards.size();
+            shuffledLovers.get(i).getCardToBuffer(random, boundOfRandom, cards);
         }
     }
 
@@ -163,23 +163,13 @@ public class Main {
         List<Lover> shuffledLovers = new ArrayList<>();
         shuffleLovers(lovers, shuffledLovers);
 
-        //creating a random int in bound of 0-35
-        //after removing gender u need to create bound of 0-31
-        Random random = new Random();
-        int randomCard = 0;
-//        int boundOfRandom = 35;
-        int boundOfRandom = 40;
-
-
-        InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
+        InitializeLover(shuffledLovers,cards);
         getLoversFromList(shuffledLovers);
         removeLover(cards, shuffledLovers, lovers);
-        boundOfRandom-=8;
-        InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
+        InitializeLover(shuffledLovers,cards);
         getLoversFromList(shuffledLovers);
         removeLover(cards, shuffledLovers, lovers);
-        boundOfRandom-=8;
-        InitializeLover(shuffledLovers,cards,boundOfRandom,random,randomCard);
+        InitializeLover(shuffledLovers,cards);
         getLoversFromList(shuffledLovers);
         findYourLover(shuffledLovers, lovers);
 

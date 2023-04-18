@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Added Lover without name and commented some souts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test1.java" afterDir="false" />
+    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Added functional to remember removed lovers and comparator to cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681432208787</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added functional to remember removed lovers and comparator to cards">
+      <created>1681853629524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681853629524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +134,7 @@
     <MESSAGE value="Main and Lover were changed." />
     <MESSAGE value="Game is done. Need to fix some sout in the future." />
     <MESSAGE value="Added Lover without name and commented some souts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Lover without name and commented some souts" />
+    <MESSAGE value="Added functional to remember removed lovers and comparator to cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functional to remember removed lovers and comparator to cards" />
   </component>
 </project>
