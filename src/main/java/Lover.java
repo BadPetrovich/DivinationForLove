@@ -8,10 +8,6 @@ public class Lover {
     public Lover() {
     }
 
-//    public Lover(String name) {
-//        this.name = name;
-//    }
-
 
     public void getCardToBuffer(Random random, int randomCard, int boundOfRandom, List<String> cards){
 
@@ -19,11 +15,9 @@ public class Lover {
             randomCard = random.nextInt(boundOfRandom);
             myDeck.add(cards.get(randomCard));
             cards.remove(randomCard);
-//            cards.set(randomCard, "*********");
-//            System.out.print(randomCard + " ");
             boundOfRandom--;
         }
-//        System.out.println();
+        myDeck.sort(new CardComparator());
     }
 
     public void setName(String name) {
@@ -61,5 +55,33 @@ public class Lover {
     @Override
     public int hashCode() {
         return Objects.hash(name, myDeck);
+    }
+
+
+}
+
+class CardComparator implements Comparator<String>{
+    String[] suit = {"spades", "hearts", "diamonds", "clubs"};
+
+    @Override
+    public int compare(String o1, String o2) {
+        String[] suit1 = o1.split(" ");
+        String[] suit2 = o2.split(" ");
+
+        int result=0;
+        for (String s : suit) {
+            if(suit1[1].matches(s) && suit2[1].matches(s)){
+                break;
+            }
+            else if(suit1[1].matches(s) && !suit2[1].matches(s)){
+                result=1;
+                break;
+            }
+            else if(!suit1[1].matches(s) && suit2[1].matches(s)){
+                result=-1;
+                break;
+            }
+        }
+        return result;
     }
 }
