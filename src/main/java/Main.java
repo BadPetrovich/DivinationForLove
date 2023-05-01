@@ -35,73 +35,63 @@ public class Main {
 //        }
     }
 
-    //Shuffle like cards
-    public static void shuffleLovers(List<Lover> lovers, List<Lover> shuffeledLovers){
-        Random random = new Random();
-        int randomLover = 0;
-        int boundOfLovers = 4;
-        for(int i =0;i<4;i++){
-            randomLover = random.nextInt(boundOfLovers);
-            shuffeledLovers.add(lovers.get(randomLover));
-            lovers.remove(randomLover);
-            boundOfLovers--;
-        }
-
-    }
-
     public static void getLoversFromList(List<Lover> shuffeledLovers){
         for(int i =0;i<shuffeledLovers.size();i++){
 
             //getMyDeck instead of get
             // ---! Change if YOU wanna see names !---
 //            String s = String.valueOf(shuffeledLovers.get(i));
-            String s = String.valueOf(shuffeledLovers.get(i).getMyDeck());
-            System.out.println(i+1 + " " + s);
+            String loversDeck = String.valueOf(shuffeledLovers.get(i).getMyDeck());
+            System.out.println(i+1 + " " + loversDeck);
         }
     }
 
     public static void InitializeLover(List<Lover> shuffledLovers, List<String> cards){
-        Random random = new Random();
+
         for(int i = 0; i<shuffledLovers.size();i++){
             int boundOfRandom=cards.size();
-            shuffledLovers.get(i).getCardToBuffer(random, boundOfRandom, cards);
+            shuffledLovers.get(i).getCardToBuffer(boundOfRandom, cards);
         }
     }
 
-    public static void removeLover(List<String> cards, List<Lover> shuffeledLovers, List<Lover> lovers){
+    public static String removeLover(List<String> cards, List<Lover> lovers){
 
         System.out.println("Now you should choose what lover is bad for you!");
         System.out.println("Print his number");
         Scanner scRemover = new Scanner(System.in);
         int removeIndex = scRemover.nextInt()-1;
-        lovers.add(shuffeledLovers.get(removeIndex));
-        shuffeledLovers.remove(removeIndex);
-        for(int i =0;i<shuffeledLovers.size();i++){
-            cards.addAll(shuffeledLovers.get(i).getMyDeck());
-            shuffeledLovers.get(i).clearMyDeck();
+        String deletedLover = lovers.get(removeIndex).getName();
+        lovers.remove(removeIndex);
+        for(int i =0;i<lovers.size();i++){
+            cards.addAll(lovers.get(i).getMyDeck());
+            lovers.get(i).clearMyDeck();
         }
+        return deletedLover;
     }
 
-    public static void findYourLover(List<Lover> shuffeledLovers, List<Lover> lovers){
+    public static void findYourLover(List<Lover> lovers, List<String> deletedLovers){
 
         System.out.println("Now you should choose last person you'll remove! It's epic moment!!!");
         System.out.println("Print his number");
         Scanner scRemover = new Scanner(System.in);
         int removeIndex = scRemover.nextInt()-1;
-        lovers.add(shuffeledLovers.get(removeIndex));
-        shuffeledLovers.remove(removeIndex);
-        System.out.println("Yeees!!! Finally! Name of your lover is... " + shuffeledLovers.get(0).getName());
+        deletedLovers.add(lovers.get(removeIndex).getName());
+        lovers.remove(removeIndex);
+        System.out.println("Yeees!!! Finally! Name of your lover is... " + lovers.get(0).getName());
         System.out.println("Happy love to both of you!");
         System.out.println("Do you want to know what lover you deleted each step?");
         System.out.println("Print 1 if you want to display this");
         if(scRemover.nextInt()==1){
-            System.out.println("First was removed - " + lovers.get(0).getName());
-            System.out.println("Second was removed - " + lovers.get(1).getName());
-            System.out.println("And last was removed - " + lovers.get(2).getName());
+            int i = 0;
+            for (String s: deletedLovers){
+                i++;
+                System.out.println(i + " was removed - " + s);
+            }
         }
         System.out.println("Thank you for playing and goodbye))");
 
     }
+
 
     public static void main(String[] args){
 
@@ -160,18 +150,19 @@ public class Main {
         lovers.add(thirdLover);
         lovers.add(fourthLover);
 
-        List<Lover> shuffledLovers = new ArrayList<>();
-        shuffleLovers(lovers, shuffledLovers);
+        Collections.shuffle(lovers);
 
-        InitializeLover(shuffledLovers,cards);
-        getLoversFromList(shuffledLovers);
-        removeLover(cards, shuffledLovers, lovers);
-        InitializeLover(shuffledLovers,cards);
-        getLoversFromList(shuffledLovers);
-        removeLover(cards, shuffledLovers, lovers);
-        InitializeLover(shuffledLovers,cards);
-        getLoversFromList(shuffledLovers);
-        findYourLover(shuffledLovers, lovers);
+        List<String> deletedLovers = new ArrayList<>();
+
+        InitializeLover(lovers,cards);
+        getLoversFromList(lovers);
+        deletedLovers.add(removeLover(cards, lovers));
+        InitializeLover(lovers,cards);
+        getLoversFromList(lovers);
+        deletedLovers.add(removeLover(cards, lovers));
+        InitializeLover(lovers,cards);
+        getLoversFromList(lovers);
+        findYourLover(lovers, deletedLovers);
 
     }
 }

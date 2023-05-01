@@ -8,11 +8,13 @@ public class Lover {
     public Lover() {
     }
 
+    public void getCardToBuffer(int boundOfRandom, List<String> cards){
 
-    public void getCardToBuffer(Random random, int boundOfRandom, List<String> cards){
+        Random random = new Random();
+        int randomCard;
 
         for(int i = 0; i<8; i++){
-            int randomCard = random.nextInt(boundOfRandom);
+            randomCard = random.nextInt(boundOfRandom);
             myDeck.add(cards.get(randomCard));
             cards.remove(randomCard);
             boundOfRandom--;
@@ -68,17 +70,15 @@ class CardComparator implements Comparator<String>{
         String[] suit1 = o1.split(" ");
         String[] suit2 = o2.split(" ");
 
-        int result=0;
+        int result = 0;
         for (String s : suit) {
-            if(suit1[1].matches(s) && suit2[1].matches(s)){
+            if (suit1[1].matches(s) && suit2[1].matches(s)) {
                 break;
-            }
-            else if(suit1[1].matches(s) && !suit2[1].matches(s)){
-                result=1;
+            } else if (suit1[1].matches(s) && !suit2[1].matches(s)) {
+                result = 1;
                 break;
-            }
-            else if(!suit1[1].matches(s) && suit2[1].matches(s)){
-                result=-1;
+            } else if (!suit1[1].matches(s) && suit2[1].matches(s)) {
+                result = -1;
                 break;
             }
         }
