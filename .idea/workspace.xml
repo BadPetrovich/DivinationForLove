@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Added IO class for all IO logic and some fixes for code">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/SpringBootMyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/controller/MyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/first-view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Started to change App to MVC">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682947038715</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Started to change App to MVC">
+      <created>1682956159567</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682956159567</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +187,7 @@
     <MESSAGE value="Added some fixes" />
     <MESSAGE value="Added Collections.shuffle instead of function &quot;shuffleLovers&quot; for it. Removed shuffledLover ArrayList and cleaned some code in functions." />
     <MESSAGE value="Added IO class for all IO logic and some fixes for code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added IO class for all IO logic and some fixes for code" />
+    <MESSAGE value="Started to change App to MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to change App to MVC" />
   </component>
 </project>
