@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Started to change App to MVC">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/style.css" afterDir="false" />
+    <list default="true" id="b01c5e48-d86e-4dff-90bb-6ee3debd2235" name="Changes" comment="Some changes to Front">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +39,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ivant/IdeaProjects/spring_pet",
+    "last_opened_file_path": "C:/Users/ivant/IdeaProjects/DivinationForLove/src/main/resources/static",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ivant\IdeaProjects\DivinationForLove\src\main\resources\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ivant\IdeaProjects\DivinationForLove\src\main\webapp\WEB-INF\view" />
     </key>
@@ -164,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682956159567</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Some changes to Front">
+      <created>1682975097945</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682975097946</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +199,7 @@
     <MESSAGE value="Added Collections.shuffle instead of function &quot;shuffleLovers&quot; for it. Removed shuffledLover ArrayList and cleaned some code in functions." />
     <MESSAGE value="Added IO class for all IO logic and some fixes for code" />
     <MESSAGE value="Started to change App to MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to change App to MVC" />
+    <MESSAGE value="Some changes to Front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes to Front" />
   </component>
 </project>
