@@ -7,13 +7,11 @@ public class IO {
 
         System.out.println("BadPetrovich welcomes you in Divination For Love.");
         System.out.println("At first, please choose your gender.");
-        //Can I do nextChar???
         System.out.println("Print 1 for Male or 2 for Female.");
         System.out.println();
 
         try {
             int gender = sc.nextInt();
-            //== or equals?
             if(gender==1){
                 numbers.remove("Q");
             }
@@ -26,6 +24,16 @@ public class IO {
             System.out.println();
         }
         catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String chooseLoverName(int loverNumber){
+//        loverNumber++;
+        System.out.println("Choose name for "+ loverNumber + " lover");
+        try {
+            return sc.next();
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -72,16 +80,6 @@ public class IO {
                 throw new RuntimeException(e);
             }
             System.out.println("Thank you for playing and goodbye))");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String chooseLoverName(int loverNumber){
-        loverNumber++;
-        System.out.println("Choose name for "+ loverNumber + " lover");
-        try {
-            return sc.next();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

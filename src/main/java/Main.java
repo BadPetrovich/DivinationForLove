@@ -4,8 +4,6 @@ public class Main {
 
     public static void getLoversFromList(List<Lover> shuffeledLovers){
         for(int i =0;i<shuffeledLovers.size();i++){
-
-            //getMyDeck instead of get
             // ---! Change if YOU wanna see names !---
 //            String loversDeck = String.valueOf(shuffeledLovers.get(i));
             String loversDeck = String.valueOf(shuffeledLovers.get(i).getMyDeck());
@@ -25,9 +23,6 @@ public class Main {
     public static void main(String[] args){
 
         List<String> numbers = new ArrayList<>(); //36 cards - 4 cards after lover_gender_using
-        List<String> suit = new ArrayList<>();
-        List<String> cards = new ArrayList<>();
-
         numbers.add("6");
         numbers.add("7");
         numbers.add("8");
@@ -38,6 +33,7 @@ public class Main {
         numbers.add("K");
         numbers.add("A");
 
+        List<String> suit = new ArrayList<>();
         suit.add("clubs");
         suit.add("diamonds");
         suit.add("hearts");
@@ -45,6 +41,7 @@ public class Main {
 
         IO.chooseLoverGender(numbers);
 
+        List<String> cards = new ArrayList<>();
         for(int i=0;i<numbers.size();i++){
             for(int j=0;j<suit.size();j++){
                 cards.add(numbers.get(i) + " " + suit.get(j));
@@ -63,7 +60,7 @@ public class Main {
         lovers.add(thirdLover);
         lovers.add(fourthLover);
 
-        int loverNumber=0;
+        int loverNumber=1;
         for(Lover l: lovers){
             l.setName(IO.chooseLoverName(loverNumber));
             loverNumber++;
